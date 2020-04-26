@@ -10,7 +10,16 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Some text!")
+        VStack{
+            Text("Welcome to me awesome app!")
+                .fontWeight(.semibold)
+                .foregroundColor(.green)
+            Button(action: {
+                print("Button pressed!")
+            }) {
+                Text("Hit Me!")
+            }
+        }
     }
 }
 
