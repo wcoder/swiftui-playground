@@ -11,6 +11,7 @@ import SwiftUI
 struct ContentView: View {
     
     @State var alertIsVisible: Bool = false
+    @State var whosThereIsVisible: Bool = false
     
     var body: some View {
         VStack{
@@ -29,6 +30,17 @@ struct ContentView: View {
                              message: Text("This is my first pop-up."),
                              dismissButton: .default(Text("Awesome!")))
                 
+            })
+            Button(action: {
+                self.whosThereIsVisible = true
+            }) {
+                Text("Knock, Knock!")
+            }
+            .alert(isPresented: $whosThereIsVisible, content: { () ->
+                Alert in
+                return Alert(title: Text("Who's There?"),
+                             message: Text("Little old lady."),
+                             dismissButton: .default(Text("Little old lady who?")))
             })
         }
     }
