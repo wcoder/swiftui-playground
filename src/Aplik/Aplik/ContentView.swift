@@ -9,6 +9,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var alertIsVisible: Bool = false
+    
     var body: some View {
         VStack{
             Text("Welcome to me awesome app!")
@@ -16,9 +19,17 @@ struct ContentView: View {
                 .foregroundColor(.green)
             Button(action: {
                 print("Button pressed!")
+                self.alertIsVisible = true
             }) {
                 Text("Hit Me!")
             }
+            .alert(isPresented: $alertIsVisible, content: { () ->
+                Alert in
+                return Alert(title: Text("Hello there!"),
+                             message: Text("This is my first pop-up."),
+                             dismissButton: .default(Text("Awesome!")))
+                
+            })
         }
     }
 }
