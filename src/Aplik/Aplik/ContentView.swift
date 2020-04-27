@@ -11,25 +11,62 @@ import SwiftUI
 struct ContentView: View {
     
     @State var alertIsVisible: Bool = false
+    @State var sliderValue: Double = 50.0
     
     var body: some View {
-        VStack{
-            Text("Welcome to me awesome app!")
-                .fontWeight(.semibold)
-                .foregroundColor(.green)
+        VStack {
+            
+            Spacer()
+            
+            // Target row
+            HStack {
+                Text("Put the bullseye as close as you can to:")
+                Text("100")
+            }
+            
+            // Slider row
+            HStack {
+                Text("1")
+                Slider(value: self.$sliderValue, in: 1...100)
+                Text("100")
+            }
+            
+            // Button row
             Button(action: {
                 print("Button pressed!")
                 self.alertIsVisible = true
             }) {
                 Text("Hit Me!")
             }
-            .alert(isPresented: $alertIsVisible, content: { () ->
-                Alert in
+            .alert(isPresented: $alertIsVisible, content: { () -> Alert in
+                let roundedValue: Int = Int(self.sliderValue.rounded())
                 return Alert(title: Text("Hello there!"),
-                             message: Text("This is my first pop-up."),
+                             message: Text("The slider's value is \(roundedValue)."),
                              dismissButton: .default(Text("Awesome!")))
                 
             })
+            
+            Spacer()
+            
+            // Score row
+            HStack {
+                Button(action: {})
+                {
+                    Text("Start over")
+                }
+                Spacer()
+                Text("Score:")
+                Text("9999999")
+                Spacer()
+                Text("Round:")
+                Text("9999999")
+                Spacer()
+                Button(action: {})
+                {
+                    Text("Info")
+                }
+            }
+            .padding(.bottom, 20)
         }
     }
 }
