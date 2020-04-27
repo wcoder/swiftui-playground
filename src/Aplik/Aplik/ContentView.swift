@@ -41,6 +41,30 @@ struct ContentView: View {
         }
     }
     
+    struct ButtonStyle : ViewModifier {
+        func body(content: Content) -> some View {
+            return content
+                .background(Image("Button"))
+                .modifier(Shadow())
+        }
+    }
+    
+    struct ButtonLargeTextStyle : ViewModifier {
+        func body(content: Content) -> some View {
+            return content
+                .foregroundColor(.black)
+                .font(Font.custom("Arial Rounded MT Bold", size: 18))
+        }
+    }
+    
+    struct ButtonSmallTextStyle : ViewModifier {
+        func body(content: Content) -> some View {
+            return content
+                .foregroundColor(.black)
+                .font(Font.custom("Arial Rounded MT Bold", size: 12))
+        }
+    }
+    
     var body: some View {
         VStack {
             
@@ -64,7 +88,7 @@ struct ContentView: View {
                 print("Button pressed!")
                 self.alertIsVisible = true
             }) {
-                Text("Hit Me!")
+                Text("Hit Me!").modifier(ButtonLargeTextStyle())
             }
             .alert(isPresented: $alertIsVisible, content: { () -> Alert in
                 return Alert(title: Text(alertTitle()),
@@ -78,6 +102,7 @@ struct ContentView: View {
                             })
                 
             })
+            .modifier(ButtonStyle())
             
             Spacer()
             
@@ -85,19 +110,33 @@ struct ContentView: View {
             HStack {
                 Button(action: startNewGame)
                 {
-                    Text("Start over")
+                    HStack {
+                        Image("StartOverIcon")
+                        Text("Start over").modifier(ButtonSmallTextStyle())
+                    }
                 }
+                .modifier(ButtonStyle())
+                
                 Spacer()
+                
                 Text("Score:").modifier(LabelStyle())
                 Text("\(score)").modifier(ValueStyle())
+                
                 Spacer()
+                
                 Text("Round:").modifier(LabelStyle())
                 Text("\(round)").modifier(ValueStyle())
+                
                 Spacer()
+                
                 Button(action: {})
                 {
-                    Text("Info")
+                    HStack {
+                        Image("InfoIcon")
+                        Text("Info").modifier(ButtonSmallTextStyle())
+                    }
                 }
+                .modifier(ButtonStyle())
             }
             .padding(.bottom, 20)
         }
