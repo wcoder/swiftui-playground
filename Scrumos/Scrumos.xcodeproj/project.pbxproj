@@ -25,6 +25,7 @@
 		2FE14DEE286115BB00B7C396 /* MeetingFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE14DED286115BB00B7C396 /* MeetingFooterView.swift */; };
 		2FE14DF0286117C300B7C396 /* AVPlayer+Ding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE14DEF286117C300B7C396 /* AVPlayer+Ding.swift */; };
 		2FE14DF52861198600B7C396 /* ding.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2FE14DF42861198600B7C396 /* ding.wav */; };
+		2FE14DF728611D2700B7C396 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE14DF628611D2700B7C396 /* History.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		2FE14DED286115BB00B7C396 /* MeetingFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingFooterView.swift; sourceTree = "<group>"; };
 		2FE14DEF286117C300B7C396 /* AVPlayer+Ding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVPlayer+Ding.swift"; sourceTree = "<group>"; };
 		2FE14DF42861198600B7C396 /* ding.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ding.wav; sourceTree = "<group>"; };
+		2FE14DF628611D2700B7C396 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				2F97F5FD285F5B1900406EE4 /* DailyScrum.swift */,
 				2FE14DEB2861154F00B7C396 /* ScrumTimer.swift */,
 				2FE14DEF286117C300B7C396 /* AVPlayer+Ding.swift */,
+				2FE14DF628611D2700B7C396 /* History.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 				2F97F602285F5D6C00406EE4 /* TrailingIconLabelStyle.swift in Sources */,
 				2F97F5FC285F5A7A00406EE4 /* Theme.swift in Sources */,
 				2F97F604285F5FB300406EE4 /* ScrumsView.swift in Sources */,
+				2FE14DF728611D2700B7C396 /* History.swift in Sources */,
 				2F97F5EF285F555C00406EE4 /* MeetingView.swift in Sources */,
 				2F97F5ED285F555C00406EE4 /* ScrumosApp.swift in Sources */,
 				2F392B78285F94B70063AC83 /* ThemeView.swift in Sources */,
