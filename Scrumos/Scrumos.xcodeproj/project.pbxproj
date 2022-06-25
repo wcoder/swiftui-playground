@@ -10,6 +10,7 @@
 		2F392B76285F89D10063AC83 /* DetailEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F392B75285F89D10063AC83 /* DetailEditView.swift */; };
 		2F392B78285F94B70063AC83 /* ThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F392B77285F94B70063AC83 /* ThemeView.swift */; };
 		2F392B7A285F95770063AC83 /* ThemePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F392B79285F95770063AC83 /* ThemePicker.swift */; };
+		2F66A659286772D20067E255 /* ScrumStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F66A658286772D20067E255 /* ScrumStore.swift */; };
 		2F97F5ED285F555C00406EE4 /* ScrumosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F97F5EC285F555C00406EE4 /* ScrumosApp.swift */; };
 		2F97F5EF285F555C00406EE4 /* MeetingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F97F5EE285F555C00406EE4 /* MeetingView.swift */; };
 		2F97F5F1285F555E00406EE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F97F5F0285F555E00406EE4 /* Assets.xcassets */; };
@@ -32,6 +33,7 @@
 		2F392B75285F89D10063AC83 /* DetailEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEditView.swift; sourceTree = "<group>"; };
 		2F392B77285F94B70063AC83 /* ThemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeView.swift; sourceTree = "<group>"; };
 		2F392B79285F95770063AC83 /* ThemePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemePicker.swift; sourceTree = "<group>"; };
+		2F66A658286772D20067E255 /* ScrumStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrumStore.swift; sourceTree = "<group>"; };
 		2F97F5E9285F555C00406EE4 /* Scrumos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scrumos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F97F5EC285F555C00406EE4 /* ScrumosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrumosApp.swift; sourceTree = "<group>"; };
 		2F97F5EE285F555C00406EE4 /* MeetingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingView.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				2FE14DEB2861154F00B7C396 /* ScrumTimer.swift */,
 				2FE14DEF286117C300B7C396 /* AVPlayer+Ding.swift */,
 				2FE14DF628611D2700B7C396 /* History.swift */,
+				2F66A658286772D20067E255 /* ScrumStore.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F66A659286772D20067E255 /* ScrumStore.swift in Sources */,
 				2F392B7A285F95770063AC83 /* ThemePicker.swift in Sources */,
 				2F97F5FE285F5B1900406EE4 /* DailyScrum.swift in Sources */,
 				2F97F606285F66C100406EE4 /* DetailView.swift in Sources */,
